@@ -1,8 +1,8 @@
 from django.urls import path
 
-from painel.views import conexoes, home
+from . import views
 
 urlpatterns = [
-    path('', home),
-    path('conexoes/', conexoes),
+    path('', views.home),
+    path('conexoes/<int:id>/', views.conexoes),
 ]

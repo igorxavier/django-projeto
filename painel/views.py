@@ -7,7 +7,7 @@ def home(request):
         'nome':'Igor Lemões'
     })
 
-def conexoes(request):
+def conexoes(request, id):
     return render(request, 'painel/conexoes.html', {
-        'numero':'53991900889'
+        'numero':id
     })
