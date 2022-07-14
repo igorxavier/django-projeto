@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="{% static 'global/css/style.css' %}">
 </head>
 <body>
+    <ul>
+        <li><a href="{% url 'painel:dashboard' %}">Painel</a></li>
+        <li><a href="{% url 'painel:conexoes' 0101010 %}">Conexões</a></li>
+    </ul>
     {% block conteudo %}{% endblock conteudo %}
 </body>
 </html>
