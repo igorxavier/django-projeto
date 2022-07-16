@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel | {% block titulo %}{% endblock titulo %}</title>
     <link rel="stylesheet" href="{% static 'global/css/style.css' %}">
+    
 </head>
 <body>
     <ul>
@@ -14,5 +15,8 @@
         <li><a href="{% url 'painel:conexoes' 0101010 %}">Conexões</a></li>
     </ul>
     {% block conteudo %}{% endblock conteudo %}
+
+    <script src="https://unpkg.com/htmx.org@1.8.0" integrity="sha384-cZuAZ+ZbwkNRnrKi05G/fjBX+azI9DNOkNYysZ0I/X5ZFgsmMiBXgDZof30F5ofc" crossorigin="anonymous"></script>
+    {% comment %} <script src="https://unpkg.com/htmx.org/dist/ext/sse.js"></script> {% endcomment %}
 </body>
 </html>

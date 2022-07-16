@@ -5,4 +5,31 @@
 {% block conteudo %}
 <h1>{{nome}}</h1>
 Aqui um corpo para a home do painel
+
+
+<div hx-sse="connect:{% url 'painel:stream' %}?valor=9 swap:message"></div>
+
+<hr>
+
+<button hx-get="{% url 'painel:clicado' %}"
+    hx-trigger="click"
+    hx-target="#parent-div"
+    hx-swap="outerHTML"
+>
+    Click Me!
+</button>
+
+<input type="text" name="q"
+    hx-get="{% url 'painel:clicado' %}"
+    hx-trigger="keyup delay:500ms changed"
+    hx-target="#parent-div"
+    placeholder="Search..."
+>
+
+<hr>
+
+<div id="parent-div">
+    Já existo
+</div>
+
 {% endblock conteudo %}
